@@ -4,10 +4,11 @@ export const FontPreview: FC<{
   name: string;
   award: string;
   previewText: string;
-}> = ({ name, award, previewText }) => {
+  className?: string;
+}> = ({ name, award, previewText, className }) => {
   return (
-    <>
-      <div className="my-3 p-5 rounded-lg transition hover:bg-gray-100 dark:hover:bg-gray-700">
+    <div className={className}>
+      <div className="my-3 p-5 rounded-lg transition hover:bg-gray-200 dark:hover:bg-gray-700">
         <h3 className="text-xl font-semibold font-heading text-gray-500 dark:text-gray-400">
           {name}
           <span className="font-medium font-serif italic"> - {award}</span>
@@ -17,6 +18,6 @@ export const FontPreview: FC<{
         </h1>
       </div>
       <hr className="dark:border-gray-700" />
-    </>
+    </div>
   );
 };
