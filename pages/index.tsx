@@ -44,7 +44,7 @@ const Home: NextPage = () => {
         <FontPreview
           name={name}
           award={award}
-          delay={0.15 + i * 0.05} // Stagger effect
+          delay={150 + i * 50} // Stagger effect
           previewText={text}
           key={i}
         />
