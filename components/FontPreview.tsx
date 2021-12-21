@@ -1,13 +1,14 @@
 import { FC } from "react";
+import { FadeInUp } from "./FadeInUp";
 
 export const FontPreview: FC<{
   name: string;
   award: string;
   previewText: string;
-  className?: string;
-}> = ({ name, award, previewText, className }) => {
+  delay?: number;
+}> = ({ name, award, previewText, delay }) => {
   return (
-    <div className={className}>
+    <FadeInUp delay={delay}>
       <div className="my-3 p-5 rounded-lg transition hover:bg-gray-200 dark:hover:bg-gray-700">
         <h3 className="text-xl font-semibold font-heading text-gray-500 dark:text-gray-400">
           {name}
@@ -18,6 +19,6 @@ export const FontPreview: FC<{
         </h1>
       </div>
       <hr className="dark:border-gray-700" />
-    </div>
+    </FadeInUp>
   );
 };
